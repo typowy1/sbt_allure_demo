@@ -27,7 +27,7 @@ public class PatchTest extends BaseTest {
     @DisplayName("Update user with specific email ")
     @ParameterizedTest(name = "Update user with specific email: {0} ")
     @MethodSource("updateUserEmailData")
-    public void createOrganization(String email) {
+    public void updateUserEmail(String email) {
 
         user.put("email", email);
 
@@ -51,6 +51,4 @@ public class PatchTest extends BaseTest {
                 Arguments.of("test@testemail.pl"),
                 Arguments.of("test@testemail.eu"));
     }
-
-
 }
