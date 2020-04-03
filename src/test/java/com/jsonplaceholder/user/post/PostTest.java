@@ -75,7 +75,7 @@ public class PostTest extends BaseTest {
     @DisplayName("Create user with specific email ")
     @ParameterizedTest(name = "Create user with specific email: {0} ")
     @MethodSource("createUserEmailData")
-    public void createOrganization(String email) {
+    public void createUserWithSpecificEmail(String email) {
 
         user.setEmail(email);
 
@@ -101,5 +101,4 @@ public class PostTest extends BaseTest {
                 Arguments.of("test@testemail.pl"),
                 Arguments.of("test@testemail.eu"));
     }
-
 }
