@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.assertj.core.api.Assertions.*;
 
 public class PutTest extends BaseTest {
 
@@ -63,6 +64,6 @@ public class PutTest extends BaseTest {
                 .response();
 
         JsonPath json = response.jsonPath();
-        Assertions.assertThat(json.getString("name")).isEqualTo(user.getName());
+        assertThat(json.getString("name")).isEqualTo(user.getName());
     }
 }
